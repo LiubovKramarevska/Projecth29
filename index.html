@@ -59,7 +59,7 @@
         <div class="toolbar">
 <a href="wishlist.html"> <i class="far fa-heart"></i></a>
 <a href="cart.html"> <i class="fas fa-dolly-flatbed"></i></a>
-<a href="#"> <i class="far fa-user"></i></a>
+<a onclick="window.login.showModal();"> <i class="far fa-user"></i></a>
         </div>
     </header>
     <!-- hero -->
@@ -87,7 +87,7 @@
                 <div class="icons">
                     <a href="#" title="Add to wishlist"> <i class="far fa-heart"></i></a>
                     <a href="#" title="Add to cart"> <i class="fas fa-dolly-flatbed"></i></a>
-                    <a href="#" title="Show details"> <i class="far fa-eye"></i></a>
+                    <a href="#productView" title="Show details"> <i class="far fa-eye"></i></a>
                 </div>
                 <div class="image">
                     <div class="badge text-white bg-sale">Sale</div>
@@ -103,7 +103,7 @@
                 <div class="icons">
                     <a href="#" title="Add to wishlist"> <i class="far fa-heart"></i></a>
                     <a href="#" title="Add to cart"> <i class="fas fa-dolly-flatbed"></i></a>
-                    <a href="#" title="Show details"> <i class="far fa-eye"></i></a>
+                    <a href="#productView" title="Show details"> <i class="far fa-eye"></i></a>
                 </div>
                 <div class="image">
                     <div class="badge text-white bg-sale"></div>
@@ -119,7 +119,7 @@
                 <div class="icons">
                     <a href="#" title="Add to wishlist"> <i class="far fa-heart"></i></a>
                     <a href="#" title="Add to cart"> <i class="fas fa-dolly-flatbed"></i></a>
-                    <a href="#" title="Show details"> <i class="far fa-eye"></i></a>
+                    <a href="#productView" title="Show details"> <i class="far fa-eye"></i></a>
                 </div>
                 <div class="image">
                     <div class="badge text-white bg-new">New</div>
@@ -135,7 +135,7 @@
                 <div class="icons">
                     <a href="#" title="Add to wishlist"> <i class="far fa-heart"></i></a>
                     <a href="#" title="Add to cart"> <i class="fas fa-dolly-flatbed"></i></a>
-                    <a href="#" title="Show details"> <i class="far fa-eye"></i></a>
+                    <a href="#productView" title="Show details"> <i class="far fa-eye"></i></a>
                 </div>
                 <div class="image">
                     <div class="badge text-white bg-sale">Sale</div>
@@ -151,7 +151,7 @@
                 <div class="icons">
                     <a href="#" title="Add to wishlist"> <i class="far fa-heart"></i></a>
                     <a href="#" title="Add to cart"> <i class="fas fa-dolly-flatbed"></i></a>
-                    <a href="#" title="Show details"> <i class="far fa-eye"></i></a>
+                    <a href="#productView" title="Show details"> <i class="far fa-eye"></i></a>
                 </div>
                 <div class="image">
                      <img src="images/candle6.jpeg">
@@ -166,7 +166,7 @@
                 <div class="icons">
                     <a href="#" title="Add to wishlist"> <i class="far fa-heart"></i></a>
                     <a href="#" title="Add to cart"> <i class="fas fa-dolly-flatbed"></i></a>
-                    <a href="#" title="Show details"> <i class="far fa-eye"></i></a>
+                    <a href="#productView" title="Show details"> <i class="far fa-eye"></i></a>
                 </div>
                 <div class="image">
                     <div class="badge text-white bg-sale">Sale</div>
@@ -182,7 +182,7 @@
                 <div class="icons">
                     <a href="#" title="Add to wishlist"> <i class="far fa-heart"></i></a>
                     <a href="#" title="Add to cart"> <i class="fas fa-dolly-flatbed"></i></a>
-                    <a href="#" title="Show details"> <i class="far fa-eye"></i></a>
+                    <a href="#productView" title="Show details"> <i class="far fa-eye"></i></a>
                 </div>
                 <div class="image">
                      <img src="images/candle8.webp">
@@ -294,5 +294,45 @@
 </div>
 </div>
     </footer>
+
+    <div class="modal-window">
+        <div class="modal" id="productView">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <a class="close btn-close" href="#"><i class="fas fa-times"></i> </a>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="bg-center bg-cover d-block h-100"
+                                style="background: url(images/candle6.jpeg)"></div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="py-5">
+                                    <h2>Product name</h2>
+                                    <p>222</p>
+                                    <p>Lorem ipsum dolor sit amet. Sed voluptatum repellendus eos delectus delectus ut amet officia ut exercitationem deserunt ut quis temporibus ut accusamus laborum. A sunt esse et excepturi commodi aut voluptas dolorem. Rem fugit fugit qui delectus nihil est repudiandae culpa eum galisum animi aut atque nisi et dignissimos temporibus ut fugiat deleniti.Ut amet obcaecati hic alias reiciendis ut laborum eveniet et voluptatem perspiciatis. Est harum placeat qui iusto quam nam error aliquid eos alias soluta et odit doloribus et culpa dolorem in molestiae iure</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <dialog id="login">
+        <form class="login-form">
+            <h3>Sign in</h3>
+            <input type="email " placeholder="Enter email" class="box form-control">
+            <input type="password " placeholder="Enter password" class="box form-control">
+            <div class="remember form-check">
+                <input type="checkbox" class="form-check-input">
+                <label>Remember me</label>
+
+            </div>
+            <input type="submit" value="Sign in"> 
+            <a onclick="window.login.close();">Close</a>
+        </form>
+    </dialog>
 </body>
 </html>
